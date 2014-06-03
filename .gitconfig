@@ -1,0 +1,36 @@
+[user]
+    name = Philip Gardner
+    email = philip@no-logo.co.uk
+
+[core]
+  editor = sublime -w
+  excludesfile = ~/.gitignore
+  whitespace = blank-at-eol,cr-at-eol,tab-in-indent
+
+[alias]
+  a = add
+  aa = add .
+  ap = add -p
+  b = branch
+  ci = commit
+  cv = commit -v
+  d = diff
+  dc = diff --cached
+  df = diff --function-context
+  ld = log ORIG_HEAD.. --stat --no-merges
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  s = status
+  ss = status -s
+  in = !git fetch && git log ..origin/master
+  git = hub
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
+
+[push]
+  default = matching
