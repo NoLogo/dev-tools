@@ -1,4 +1,8 @@
+# Python
 *.py[co]
+
+# Vim
+*.swp
 
 # Packages
 *.egg

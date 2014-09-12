@@ -13,6 +13,7 @@
   ap = add -p
   b = branch
   ci = commit
+  co = checkout
   cv = commit -v
   d = diff
   dc = diff --cached
