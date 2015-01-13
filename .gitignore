@@ -35,3 +35,12 @@ pip-log.txt
 
 #DS_Store
 .DS_Store
+
+#Virtual Enviroments
+venv
+
+#Codeintel
+.codeintel
+
+#Sass
+.sass-cache
