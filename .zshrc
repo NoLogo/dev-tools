@@ -5,9 +5,6 @@ setopt INTERACTIVECOMMENTS
 # SETTINGS #
 ############
 
-# Make pip cache locally
-export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache/"
-
 export EDITOR="vim"
 
 # Back and forward through commands with CTRL-left/right
