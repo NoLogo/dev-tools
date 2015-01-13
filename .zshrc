@@ -41,33 +41,16 @@ alias ls='ls --color'
 alias l='ls -lh'
 alias ll='ls -la'
 
-###############
-# Virtual ENV #
-###############
-
-# Create a virtual environment.
-function mkvenv3 {
-    defaultname=`basename $PWD`
-    name=${1:-$defaultname}
-    mkvirtualenv $name -a `pwd` -p `which python3`
-}
-function mkvenv2 {
-    defaultname=`basename $PWD`
-    name=${1:-$defaultname}
-    mkvirtualenv $name -a `pwd` -p `which python2`
-}
-
-################
-# ZSH Settings #
-################
-
 ZSH=$HOME/.oh-my-zsh
+
 ZSH_THEME="agnoster"
 
 source $ZSH/oh-my-zsh.sh
+
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 HIST_STAMPS="dd/mm/yyyy"
+
 plugins=(git)
 
 export PATH=/usr/local/bin:$PATH
