@@ -55,3 +55,19 @@ plugins=(git)
 
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+
+#############
+# FUNCTIONS #
+#############
+
+# Create a virtual environment.
+function mkvenv3 {
+    defaultname=`basename $PWD`
+    name=${1:-$defaultname}
+    mkvirtualenv $name -a `pwd` -p `which python3`
+}
+function mkvenv2 {
+    defaultname=`basename $PWD`
+    name=${1:-$defaultname}
+    mkvirtualenv $name -a `pwd` -p `which python2`
+}
