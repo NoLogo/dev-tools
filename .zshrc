@@ -17,7 +17,6 @@ export WORDCHARS=''
 
 # Virtualenvwrapper
 export WORKON_HOME=~/venvs
-export VIRTUALENVWRAPPER_PYTHON=`which python2`
 source /usr/local/bin/virtualenvwrapper.sh
 
 ###########
