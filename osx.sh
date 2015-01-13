@@ -10,3 +10,4 @@ echo ":verbose: true\ngem: --no-ri --no-rdoc" > ~/.gemrc
 
 /usr/bin/sudo /usr/bin/gem install compass sass
 
+/usr/bin/curl -L http://install.ohmyz.sh | sh
