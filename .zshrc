@@ -25,7 +25,7 @@ alias m="make test"
 alias mf="make testfast"
 alias pipr="pip install -r requirements.txt"
 alias t=tree -I "*.pyc"
-alias vimr="open -a VimR"
+alias vim="open -a VimR"
 
 # Alias hub to git, passing all args.
 function git(){hub "$@"}
