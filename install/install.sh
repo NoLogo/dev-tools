@@ -1,5 +1,5 @@
 # Ruby
-/usr/bin/curl -fsSkL raw.github.com/mxcl/homebrew/go | ruby
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo ":verbose: true\ngem: --no-ri --no-rdoc" > ~/.gemrc
 /usr/bin/sudo /usr/bin/gem install compass sass
 
