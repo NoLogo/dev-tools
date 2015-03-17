@@ -7,7 +7,6 @@ distribute
 dj-database-url
 Django
 Fabric
-fabric
 flake8
 hoard
 macholib
@@ -56,7 +55,6 @@ pyobjc-framework-ServiceManagement
 pyobjc-framework-SyncServices
 pyobjc-framework-SystemConfiguration
 pyobjc-framework-WebKit
-pyobjc-framework-XgridFoundation
 pyOpenSSL
 PyRSS2Gen
 python-dateutil
@@ -69,7 +67,6 @@ tox
 twine
 Twisted
 unpyclib
-vboxapi
 virtualenv
 virtualenv-clone
 virtualenvwrapper
