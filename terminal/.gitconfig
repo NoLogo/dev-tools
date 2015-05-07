@@ -10,36 +10,48 @@
   whitespace = blank-at-eol,cr-at-eol,tab-in-indent
 
 [alias]
+  git = hub
+
   a = add
   aa = add .
   ap = add -p
   b = branch
-  ci = commit
+  c = commit
   co = checkout
+  cob = checkout -b
   cv = commit -v
   d = diff
   dc = diff --cached
   df = diff --function-context
   dw = diff --word-diff
+  in = !git fetch && git log ..origin/master
   ld = log ORIG_HEAD.. --stat --no-merges
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
+  pl = pull
+  pp = !git pull && git push
+  ps = push
   s = status
   ss = status -s
-  in = !git fetch && git log ..origin/master
-  git = hub
+  who = shortlog -n -s --no-merges
 
 [color]
   branch = auto
   diff = auto
   status = auto
-    ui = true
+  ui = true
 
 [color "status"]
   added = green
   changed = red
   untracked = yellow
+
+[status]
+  relativePaths = true
+
+[merge]
+  conflictstyle = diff3
 
 [push]
   default = current
