@@ -9,6 +9,7 @@ Django
 Fabric
 flake8
 hoard
+ipython
 jedi
 macholib
 matplotlib
