@@ -26,6 +26,8 @@ ossp-uuid
 pcre
 pkg-config
 postgresql
+python
+python3
 readline
 scala
 sdl
