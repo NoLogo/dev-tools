@@ -52,6 +52,7 @@ plugins=(git)
 
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$PATH:/usr/local/Cellar/libmemcached/1.0.18_1/include
 
 #############
 # FUNCTIONS #
@@ -68,3 +69,5 @@ function mkvenv2 {
     name=${1:-$defaultname}
     mkvirtualenv $name -a `pwd` -p `which python2`
 }
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

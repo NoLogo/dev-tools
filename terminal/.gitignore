@@ -3,6 +3,10 @@
 
 # Vim
 *.swp
+*.swo
+
+# Vim Packages
+.ropeproject*
 
 # Packages
 *.egg
