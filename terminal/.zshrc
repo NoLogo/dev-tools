@@ -27,6 +27,7 @@ alias pipr="pip install -r requirements.txt"
 alias t=tree -I "*.pyc"
 alias vimr="open -a VimR"
 alias cat='pygmentize -g'
+alias num_cat='pygmentize -g -O style=colorful,linenos=1'
 
 # Alias hub to git, passing all args.
 function git(){hub "$@"}
