@@ -26,6 +26,7 @@ alias mf="make testfast"
 alias pipr="pip install -r requirements.txt"
 alias t=tree -I "*.pyc"
 alias vimr="open -a VimR"
+alias cat='pygmentize -g'
 
 # Alias hub to git, passing all args.
 function git(){hub "$@"}

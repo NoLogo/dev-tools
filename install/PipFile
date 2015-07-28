@@ -25,6 +25,7 @@ py2app
 pycrypto
 pyflakes
 pygeocoder
+pygments
 pyOpenSSL
 PyRSS2Gen
 python-dateutil
