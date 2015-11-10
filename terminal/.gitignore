@@ -9,6 +9,7 @@
 .ropeproject*
 
 # Packages
+.bundle
 *.egg
 *.egg-info
 dist

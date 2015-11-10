@@ -60,16 +60,28 @@ export PATH=$PATH:/usr/local/Cellar/libmemcached/1.0.18_1/include
 # FUNCTIONS #
 #############
 
+# CleanUp `.pyc` files.
+function clean_pyc {
+    find . -name "*.pyc" -exec rm '{}' ';'
+}
+
+# Post venv pip installs & updates.
+function postvenv {
+    pip install --upgrade ipython pip setuptools wheel
+}
+
 # Create a virtual environment.
 function mkvenv3 {
     defaultname=`basename $PWD`
     name=${1:-$defaultname}
     mkvirtualenv $name -a `pwd` -p `which python3`
+    postvenv
 }
 function mkvenv2 {
     defaultname=`basename $PWD`
     name=${1:-$defaultname}
     mkvirtualenv $name -a `pwd` -p `which python2`
+    postvenv
 }
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
