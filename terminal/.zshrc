@@ -67,7 +67,7 @@ function clean_pyc {
 
 # Post venv pip installs & updates.
 function postvenv {
-    pip install --upgrade ipython pip setuptools wheel
+    pip install --upgrade pip setuptools wheel ipdb
 }
 
 # Create a virtual environment.
@@ -113,3 +113,10 @@ build_prompt() {
   prompt_newline
   prompt_end
 }
+
+
+
+
+export JENV_ROOT=/usr/local/var/jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
