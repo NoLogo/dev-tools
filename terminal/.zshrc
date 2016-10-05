@@ -118,9 +118,7 @@ build_prompt() {
   prompt_end
 }
 
-
-
-
+# Dirty Java bits
 export JENV_ROOT=/usr/local/var/jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
