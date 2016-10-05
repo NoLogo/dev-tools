@@ -19,11 +19,13 @@ libevent
 libmemcached
 libpng
 libtiff
+lynx
 memcached
 nmap
 node
 opencv
 ossp-uuid
+pandoc
 pcre
 pkg-config
 postgresql

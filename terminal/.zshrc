@@ -65,6 +65,10 @@ function clean_pyc {
     find . -name "*.pyc" -exec rm '{}' ';'
 }
 
+function show_MD() {
+    pandoc $1 | lynx -stdin
+  }
+
 # Post venv pip installs & updates.
 function postvenv {
     pip install --upgrade pip setuptools wheel ipdb
