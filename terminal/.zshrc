@@ -12,6 +12,7 @@ bindkey '5D' emacs-backward-word
 bindkey '5C' emacs-forward-word
 export WORDCHARS=''
 
+
 # Virtualenvwrapper
 export WORKON_HOME=~/venvs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -36,7 +37,7 @@ function git(){hub "$@"}
 alias k='tree'
 alias ltr='ls -ltr'
 alias r='screen -D -R'
-alias ls='ls --color'
+alias ls='ls -color'
 alias l='ls -lh'
 alias ll='ls -la'
 
@@ -84,7 +85,7 @@ function mkvenv3 {
 function mkvenv2 {
     defaultname=`basename $PWD`
     name=${1:-$defaultname}
-    mkvirtualenv $name -a `pwd` -p `which python2`
+    mkvirtualenv $name -a `pwd` -p `which python2.7`
     postvenv
 }
 
@@ -117,8 +118,3 @@ build_prompt() {
   prompt_newline
   prompt_end
 }
-
-# Dirty Java bits
-export JENV_ROOT=/usr/local/var/jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
