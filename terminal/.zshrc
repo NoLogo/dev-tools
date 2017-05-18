@@ -5,7 +5,7 @@ setopt INTERACTIVECOMMENTS
 # SETTINGS #
 ############
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Back and forward through commands with CTRL-left/right
 bindkey '5D' emacs-backward-word
@@ -36,7 +36,7 @@ function git(){hub "$@"}
 alias k='tree'
 alias ltr='ls -ltr'
 alias r='screen -D -R'
-alias ls='ls --color'
+alias ls='ls -color'
 alias l='ls -lh'
 alias ll='ls -la'
 
@@ -71,7 +71,7 @@ function show_MD() {
 
 # Post venv pip installs & updates.
 function postvenv {
-    pip install --upgrade pip setuptools wheel ipdb
+    pip install --upgrade pip setuptools wheel ipdb neovim
 }
 
 # Create a virtual environment.
@@ -84,7 +84,7 @@ function mkvenv3 {
 function mkvenv2 {
     defaultname=`basename $PWD`
     name=${1:-$defaultname}
-    mkvirtualenv $name -a `pwd` -p `which python2`
+    mkvirtualenv $name -a `pwd` -p `which python2.7`
     postvenv
 }
 
