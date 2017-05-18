@@ -1,15 +1,11 @@
 altgraph
 bdist-mpkg
-bonjour-py
 devpi-client
 devpi-common
 distribute
 dj-database-url
 Django
-Fabric
-fab-django-deploy
 flake8
-hoard
 ipython
 jedi
 macholib
@@ -36,7 +32,6 @@ stevedore
 termcolor
 tox
 twine
-Twisted
 unpyclib
 virtualenv
 virtualenv-clone

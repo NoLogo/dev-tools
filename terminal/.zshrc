@@ -12,6 +12,7 @@ bindkey '5D' emacs-backward-word
 bindkey '5C' emacs-forward-word
 export WORDCHARS=''
 
+
 # Virtualenvwrapper
 export WORKON_HOME=~/venvs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -117,8 +118,3 @@ build_prompt() {
   prompt_newline
   prompt_end
 }
-
-# Dirty Java bits
-export JENV_ROOT=/usr/local/var/jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
