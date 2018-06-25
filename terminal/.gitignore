@@ -49,3 +49,9 @@ venv
 
 #Sass
 .sass-cache
+
+#Python local settings files
+*philip.py
+
+# Pycharm
+.idea

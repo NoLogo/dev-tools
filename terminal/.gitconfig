@@ -25,9 +25,9 @@
   df = diff --function-context
   dw = diff --word-diff
   in = !git fetch && git log ..origin/master
-  ld = log ORIG_HEAD.. --stat --no-merges
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  l = log --oneline --decorate --all
+  ld = log ORIG_HEAD.. --stat --no-merges --decorate
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
   pl = pull
   pp = !git pull && git push
