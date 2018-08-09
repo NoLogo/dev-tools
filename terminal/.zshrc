@@ -13,24 +13,17 @@ ZSH_THEME="avit"
 
 source $ZSH/oh-my-zsh.sh
 
-# ZSH Syntax Higlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
-
-# ZSH Autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# ZSH Plugins
+plugins=(zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions)
+plugins=(git osx)
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/local/bin:$PATH
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git osx)
-
-export PATH=/usr/local/bin:$PATH
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH=$PATH:/usr/local/Cellar/libmemcached/1.0.18_1/include
-
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # Back and forward through commands with CTRL-left/right
 bindkey '5D' emacs-backward-word
@@ -51,18 +44,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Go
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin
-
-# Vault
-export VAULT_ADDR='http://127.0.0.1:8200'
-
 # Asible settings
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.ansible_vault
 
 # Ruby
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 
 ###########
 # ALIASES #
@@ -86,8 +72,6 @@ function git(){hub "$@"}
 
 # CleanUp `.pyc` files.
 function clean_pyc {find . -name "*.pyc" -exec rm '{}' ';'}
-
-function show_MD() {pandoc $1 | lynx -stdin}
 
 # Post venv pip installs & updates.
 function postvenv {pip install --upgrade pip setuptools wheel ipdb neovim}

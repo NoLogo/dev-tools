@@ -1,0 +1,15 @@
+cmake
+ctags
+curl
+gettext
+gist
+git
+git-extras
+gource
+lftp
+neovim
+nmap
+postgresql
+webp
+wget
+zsh
