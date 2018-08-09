@@ -2,6 +2,7 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo ":verbose: true\ngem: --no-ri --no-rdoc" > ~/.gemrc
 /usr/bin/sudo /usr/bin/gem install compass sass
+/usr/bin/gem install colorls
 
 # Brew
 /usr/local/bin/brew update

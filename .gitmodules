@@ -1,3 +1,6 @@
 [submodule "terminal/powerline-fonts"]
 	path = terminal/powerline-fonts
 	url = git@github.com:powerline/fonts.git
+[submodule "nerd-fonts"]
+	path = nerd-fonts
+	url = git@github.com:ryanoasis/nerd-fonts.git

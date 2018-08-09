@@ -61,6 +61,9 @@ export VAULT_ADDR='http://127.0.0.1:8200'
 # Asible settings
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.ansible_vault
 
+# Ruby
+source $(dirname $(gem which colorls))/tab_complete.sh
+
 ###########
 # ALIASES #
 ###########
@@ -70,10 +73,7 @@ alias dog='pygmentize -g'
 alias dog-num='pygmentize -g -O style=colorful,linenos=1'
 
 # Bash Directory browsing shortcuts
-alias ls='ls -color'
-alias l='ls -lah'
-alias ll='ls -la'
-alias ltr='ls -ltr'
+alias ll='colorls -la --report'
 alias r='screen -D -R'
 alias t=tree -I "*.pyc"
 
@@ -104,6 +104,26 @@ function mkvenv2 {
     name=${1:-$defaultname}
     mkvirtualenv $name -a `pwd` -p `which python2.7`
     postvenv
+}
+
+# Create Pipenv virtual environment.
+function mkpipenv3 {
+    pipenv install --three
+    # Work-around for https://github.com/pypa/pipenv/pull/1861
+    echo $(pwd) > $(pipenv --venv)/.project
+    # pip instead of pipenv because these shouldn't be stored in the Pipfile.
+    pipenv run postvenv
+    # Activate the env.
+    pipenv shell
+}
+function mkpipenv2 {
+    pipenv install --two
+    # Work-around for https://github.com/pypa/pipenv/pull/1861
+    echo $(pwd) > $(pipenv --venv)/.project
+    # pip instead of pipenv because these shouldn't be stored in the Pipfile.
+    pipenv run postvenv
+    # Activate the env.
+    pipenv shell
 }
 
 # Add To Prompt
