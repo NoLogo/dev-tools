@@ -6,11 +6,14 @@ gist
 git
 git-extras
 gource
+htop
 lftp
+vim
 neovim
 nmap
 postgresql
 python-pip
+terminator
 webp
 wget
 zsh
