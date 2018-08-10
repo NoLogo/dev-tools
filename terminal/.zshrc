@@ -20,6 +20,10 @@ plugins=(git osx)
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=/usr/local/bin:$PATH
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$PATH:$HOME/.local/bin/"
+fi
+export PATH
 
 HIST_STAMPS="dd/mm/yyyy"
 
@@ -32,10 +36,11 @@ export WORDCHARS=''
 
 # Virtualenvwrapper
 export WORKON_HOME=~/venvs
-source /usr/local/bin/virtualenvwrapper.sh
+source "$HOME/.local/bin/virtualenvwrapper.sh"
 
 # Pyenv
-export PATH="/Users/philip/.pyenv:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 

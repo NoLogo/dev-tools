@@ -3,11 +3,9 @@ bdist-mpkg
 devpi-client
 devpi-common
 distribute
-dj-database-url
-Django
+django
 flake8
 ipython
-jedi
 macholib
 matplotlib
 mccabe
