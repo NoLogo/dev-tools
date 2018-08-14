@@ -69,17 +69,17 @@ alias r='screen -D -R'
 alias t=tree -I "*.pyc"
 
 # Alias hub to git, passing all args.
-function git(){hub "$@"}
+function git(){hub "$@";}
 
 #############
 # FUNCTIONS #
 #############
 
 # CleanUp `.pyc` files.
-function clean_pyc {find . -name "*.pyc" -exec rm '{}' ';'}
+function clean_pyc() {find . -name "*.pyc" -type f -delete;}
 
 # Post venv pip installs & updates.
-function postvenv {pip install --upgrade pip setuptools wheel ipdb neovim}
+function postvenv() {pip install --upgrade pip setuptools wheel ipdb neovim;}
 
 # Create a virtual environment.
 function mkvenv3 {

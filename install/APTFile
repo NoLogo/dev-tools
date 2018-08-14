@@ -13,6 +13,7 @@ neovim
 nmap
 postgresql
 python-pip
+python3-pip
 terminator
 webp
 wget
