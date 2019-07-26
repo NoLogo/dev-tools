@@ -16,7 +16,22 @@ source $ZSH/oh-my-zsh.sh
 # ZSH Plugins
 plugins=(zsh-syntax-highlighting)
 plugins=(zsh-autosuggestions)
-plugins=(git osx)
+plugins=(
+    django
+    docker
+    git
+    github
+    node
+    npm
+    pep8
+    pip
+    pyenv
+    pylint
+    python
+    vi-mode
+    virtualenvwrapper
+    vscode
+)
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=/usr/local/bin:$PATH
@@ -37,6 +52,9 @@ export WORDCHARS=''
 # Virtualenvwrapper
 export WORKON_HOME=~/venvs
 source "$HOME/.local/bin/virtualenvwrapper.sh"
+
+# Pipenv
+PIPENV_VERBOSITY=-1
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -97,20 +115,21 @@ function mkvenv2 {
 
 # Create Pipenv virtual environment.
 function mkpipenv3 {
-    pipenv install --three
+    pipenv install --python 3.6.6
+    # pipenv install --three
     # Work-around for https://github.com/pypa/pipenv/pull/1861
     echo $(pwd) > $(pipenv --venv)/.project
     # pip instead of pipenv because these shouldn't be stored in the Pipfile.
-    pipenv run postvenv
+    pipenv run pip install ipdb neovim
     # Activate the env.
     pipenv shell
 }
 function mkpipenv2 {
-    pipenv install --two
+    pipenv --two
     # Work-around for https://github.com/pypa/pipenv/pull/1861
     echo $(pwd) > $(pipenv --venv)/.project
     # pip instead of pipenv because these shouldn't be stored in the Pipfile.
-    pipenv run postvenv
+    pipenv run pip install ipdb neovim
     # Activate the env.
     pipenv shell
 }
@@ -142,3 +161,5 @@ build_prompt() {
   prompt_newline
   prompt_end
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

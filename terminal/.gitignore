@@ -35,9 +35,6 @@ pip-log.txt
 #Translations
 *.mo
 
-#Mr Developer
-.mr.developer.cfg
-
 #DS_Store
 .DS_Store
 
@@ -55,3 +52,9 @@ venv
 
 # Pycharm
 .idea
+
+# Pyenv
+.python-version
+
+# AG - Silver Surfer
+.ignore

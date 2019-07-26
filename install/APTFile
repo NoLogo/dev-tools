@@ -11,10 +11,14 @@ lftp
 vim
 neovim
 nmap
+nodejs
+npm
 postgresql
 python-pip
 python3-pip
 terminator
+tree
 webp
 wget
+zeal
 zsh
