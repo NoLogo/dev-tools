@@ -1,6 +1,7 @@
 cmake
 ctags
 curl
+dolphin
 gettext
 gist
 git
